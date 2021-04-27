@@ -23,15 +23,15 @@ const Profile = ({tag, name, location, avatar, stats}) => (
             <p className="location">{location}</p>
         </div>
         <ul className="stats">
-    <li>
+    <li className = "stats-item">
       <span className="label">Followers</span>
       <span className="quantity">{stats.followers}</span>
     </li>
-    <li>
+    <li className = "stats-item">
       <span className="label">Views</span>
       <span className="quantity">{stats.views}</span>
     </li>
-    <li>
+    <li className = "stats-item">
       <span className="label">Likes</span>
       <span className="quantity">{stats.likes}</span>
     </li>
@@ -52,41 +52,8 @@ Profile.propTypes = {
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string,
     stats: PropTypes.object.isRequired,
-    // stats: PropTypes.shape({
-    //     followers: PropTypes.number.isRequired,
-    //     views: PropTypes.number.isRequired,
-    //     likes:PropTypes.number.isRequired
-    // }),
 }
 
 export default Profile;
 
 
-// const Profile = ({ user }) => (
-//     <div class="profile">
-//         <div class="description">
-//             <img
-//                 src={user.avatar}
-//                 alt={user.name}
-//                 class="avatar"
-//             />
-//             <p class="name">{user.name}</p>
-//             <p class="tag">{user.tag}</p>
-//             <p class="location">{user.location}</p>
-//         </div>
-//         <ul class="stats">
-//     <li>
-//       <span class="label">Followers</span>
-//       <span class="quantity">{user.stats.followers}</span>
-//     </li>
-//     <li>
-//       <span class="label">Views</span>
-//       <span class="quantity">{user.stats.views}</span>
-//     </li>
-//     <li>
-//       <span class="label">Likes</span>
-//       <span class="quantity">{user.stats.likes}</span>
-//     </li>
-//   </ul>
-//     </div>
-// )

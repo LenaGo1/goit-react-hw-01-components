@@ -10,16 +10,12 @@ const getRandomColor = () =>
   return rgb
 }
 
-
 const Statistics = ({title, stats}) => (
   <div>
     <section className="statistics">
       {title && <h2 className="title">{title}</h2>}
-      
-
       <ul className="stat-list">
         {stats.map(({ id, label, percentage }) => (
-          
           <li key={id} className="item"
           style = {{backgroundColor: getRandomColor()}}>
             <span className="label">{label}</span>
@@ -31,15 +27,18 @@ const Statistics = ({title, stats}) => (
   </div>
 );
 
-
 Statistics.defaultProps = {
   title: ""
 }
 Statistics.propTypes = {
-  title: PropTypes.string,
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
+    title: PropTypes.string,
+    stats: PropTypes.arrayOf(
+      PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          label: PropTypes.string.isRequired,
+          percentage: PropTypes.number.isRequired,
+        })
+    ).isRequired,
 }
-
+  
 export default Statistics;
