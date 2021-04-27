@@ -1,0 +1,28 @@
+.statistics {
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 10px 5px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.stat-list {
+  display: flex;
+  padding-inline-start: 0px;
+}
+
+.item {
+  display: inline-block;
+  width: 55px;
+  height: 50px;
+  margin: 2px;
+}
+.label {
+  margin-bottom: 5px;
+}
